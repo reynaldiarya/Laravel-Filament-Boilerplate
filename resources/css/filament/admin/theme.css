@@ -1,0 +1,42 @@
+@import '../../../../vendor/filament/filament/resources/css/theme.css';
+
+@source '../../../../app/Filament/**/*';
+@source '../../../../resources/views/filament/**/*';
+
+@layer components {
+    /* Light Mode */
+    .fi-sidebar {
+        @apply bg-white border-r border-gray-200;
+    }
+    
+    .fi-sidebar-item-button {
+        @apply text-gray-600 rounded-lg mx-2 my-1 transition-all;
+        @apply hover:bg-gray-100 hover:text-gray-900;
+    }
+    
+    .fi-sidebar-item-button[aria-current="page"] {
+        @apply bg-blue-50 text-blue-600 font-semibold;
+    }
+    
+    .fi-sidebar-group-label {
+        @apply text-gray-400 uppercase text-xs font-semibold;
+    }
+
+    /* Dark Mode */
+    .dark .fi-sidebar {
+        @apply bg-gray-900 border-gray-800;
+    }
+    
+    .dark .fi-sidebar-item-button {
+        @apply text-gray-300;
+        @apply hover:bg-gray-800 hover:text-white;
+    }
+    
+    .dark .fi-sidebar-item-button[aria-current="page"] {
+        @apply bg-blue-800 text-white;
+    }
+    
+    .dark .fi-sidebar-group-label {
+        @apply text-gray-500;
+    }
+}
